@@ -19,10 +19,9 @@ module div_3(t,clk,rst);
     else
        count2 <= #1 count2 + 1;
        always@(posedge clk )
-          if (count1 ==3'b000 || count1==3'b011 || count1==3'b110)
+         if (count1 ==4'b0000 || count1==4'b0011 || count1==4'b0110)
              t = ~t;
        always@(negedge clk )
-          if (count2 == 3'b001 || count2==3'b100 || count2==3'b111 )
+       if (count2 == 4'b0001 || count2==4'b0100 || count2==4'b0111 )
             t = ~t;         
 endmodule
-    
